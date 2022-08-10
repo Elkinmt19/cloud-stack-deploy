@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 python-dotenv = "*"
 localstack = "*"
+awscli-local = "*"
+awscli = "*"
 
 [dev-packages]
 
