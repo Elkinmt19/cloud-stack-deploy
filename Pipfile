@@ -8,6 +8,8 @@ python-dotenv = "*"
 localstack = "*"
 awscli-local = "*"
 awscli = "*"
+requests = "*"
+pandas = "*"
 
 [dev-packages]
 
