@@ -1,5 +1,4 @@
 import requests
-import json
 import os
 
 import pandas as pd
@@ -14,7 +13,7 @@ API_TOKEN = os.environ.get('API_TOKEN')
 HEADERS = { 'X-Auth-Token': API_TOKEN }
 
 
-def _fetch_top_scores_premier_league() -> pd.DataFrame:
+def _fetch_top_scorers_premier_league() -> pd.DataFrame:
     URI = 'https://api.football-data.org/v4/competitions/PL/scorers/?season=2021'
 
     response = requests.get(URI, headers=HEADERS)
@@ -40,7 +39,7 @@ def _fetch_liverpool_players() -> pd.DataFrame:
     return liverpool_players
 
 def main():
-    top_pl_scorers = _fetch_top_scores_premier_league()
+    top_pl_scorers = _fetch_top_scorers_premier_league()
     print(top_pl_scorers)
 
     liverpool_players = _fetch_liverpool_players()
