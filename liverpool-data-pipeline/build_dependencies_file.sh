@@ -15,5 +15,3 @@ docker stop ${CONTAINER_NAME}
 cd layers/ \
 && zip -r ${LAYER_FILE_NAME} task \
 && rm -r task
-
-
