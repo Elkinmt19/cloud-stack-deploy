@@ -1,6 +1,7 @@
 # Some custom ignores
 *.py[cod]
 *.zip
+volume
 
 # C extensions
 *.so
