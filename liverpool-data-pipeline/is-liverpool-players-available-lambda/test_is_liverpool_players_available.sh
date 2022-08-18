@@ -2,7 +2,7 @@
 LAMBDA_FUNCTION_NAME="IsLiverpoolPlayersAvailable"
 
 # Invoke the lambda function of order to test it
-awslocal lambda invoke \
+aws lambda invoke \
     --function-name ${LAMBDA_FUNCTION_NAME} \
     --invocation-type RequestResponse \
     --log-type Tail \
