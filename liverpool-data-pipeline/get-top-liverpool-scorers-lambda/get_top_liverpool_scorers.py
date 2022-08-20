@@ -21,15 +21,19 @@ logging.basicConfig(
 
 def handler(event, context):
     liverpool_players = pd.read_csv(
-        s3_client.get_object(
-            Bucket=AWS_S3_BUCKET,
-            Key="liverpool_players.csv"
+        io.BytesIO(
+            s3_client.get_object(
+                Bucket=AWS_S3_BUCKET,
+                Key="liverpool_players.csv"
+            )["Body"].read()
         )
     )
     top_scorers_pl = pd.read_csv(
-        s3_client.get_object(
-            Bucket=AWS_S3_BUCKET,
-            Key="top_scorers.csv"
+        io.BytesIO(
+            s3_client.get_object(
+                Bucket=AWS_S3_BUCKET,
+                Key="top_scorers.csv"
+            )["Body"].read()
         )
     )
 

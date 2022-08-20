@@ -1,4 +1,4 @@
-FROM public.ecr.aws/lambda/python:3.8
+FROM amazon/aws-lambda-python:3.8
 
 COPY get_top_liverpool_scorers.py ${LAMBDA_TASK_ROOT}
 
